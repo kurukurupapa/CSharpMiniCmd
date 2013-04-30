@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="FileDataSet" targetNamespace="http://tempuri.org/FileDataSet.xsd" xmlns:mstns="http://tempuri.org/FileDataSet.xsd" xmlns="http://tempuri.org/FileDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="FileDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="FileDataSet" msprop:Generator_DataSetName="FileDataSet" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="FileProperties" msprop:Generator_UserTableName="FileProperties" msprop:Generator_RowDeletedName="FilePropertiesRowDeleted" msprop:Generator_RowChangedName="FilePropertiesRowChanged" msprop:Generator_RowClassName="FilePropertiesRow" msprop:Generator_RowChangingName="FilePropertiesRowChanging" msprop:Generator_RowEvArgName="FilePropertiesRowChangeEvent" msprop:Generator_RowEvHandlerName="FilePropertiesRowChangeEventHandler" msprop:Generator_TableClassName="FilePropertiesDataTable" msprop:Generator_TableVarName="tableFileProperties" msprop:Generator_RowDeletingName="FilePropertiesRowDeleting" msprop:Generator_TablePropName="FileProperties">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" type="xs:string" />
+              <xs:element name="Size" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Size" msprop:Generator_ColumnVarNameInTable="columnSize" msprop:Generator_ColumnPropNameInRow="Size" msprop:Generator_ColumnPropNameInTable="SizeColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="LastWriteTime" msdata:ReadOnly="true" msprop:Generator_UserColumnName="LastWriteTime" msprop:Generator_ColumnVarNameInTable="columnLastWriteTime" msprop:Generator_ColumnPropNameInRow="LastWriteTime" msprop:Generator_ColumnPropNameInTable="LastWriteTimeColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SummaryPropsFlag" msdata:ReadOnly="true" msprop:Generator_UserColumnName="SummaryPropsFlag" msprop:Generator_ColumnPropNameInRow="SummaryPropsFlag" msprop:Generator_ColumnVarNameInTable="columnSummaryPropsFlag" msprop:Generator_ColumnPropNameInTable="SummaryPropsFlagColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SummaryPropsAuthor" msprop:Generator_UserColumnName="SummaryPropsAuthor" msprop:Generator_ColumnVarNameInTable="columnSummaryPropsAuthor" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="SummaryPropsAuthor" msprop:Generator_ColumnPropNameInTable="SummaryPropsAuthorColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SummaryPropsCategory" msprop:Generator_UserColumnName="SummaryPropsCategory" msprop:Generator_ColumnVarNameInTable="columnSummaryPropsCategory" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="SummaryPropsCategory" msprop:Generator_ColumnPropNameInTable="SummaryPropsCategoryColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SummaryPropsComments" msprop:Generator_UserColumnName="SummaryPropsComments" msprop:Generator_ColumnVarNameInTable="columnSummaryPropsComments" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="SummaryPropsComments" msprop:Generator_ColumnPropNameInTable="SummaryPropsCommentsColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SummaryPropsCompany" msprop:Generator_UserColumnName="SummaryPropsCompany" msprop:Generator_ColumnVarNameInTable="columnSummaryPropsCompany" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="SummaryPropsCompany" msprop:Generator_ColumnPropNameInTable="SummaryPropsCompanyColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SummaryPropsKeywords" msprop:Generator_UserColumnName="SummaryPropsKeywords" msprop:Generator_ColumnVarNameInTable="columnSummaryPropsKeywords" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="SummaryPropsKeywords" msprop:Generator_ColumnPropNameInTable="SummaryPropsKeywordsColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SummaryPropsLastSavedBy" msprop:Generator_UserColumnName="SummaryPropsLastSavedBy" msprop:Generator_ColumnVarNameInTable="columnSummaryPropsLastSavedBy" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="SummaryPropsLastSavedBy" msprop:Generator_ColumnPropNameInTable="SummaryPropsLastSavedByColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SummaryPropsManager" msprop:Generator_UserColumnName="SummaryPropsManager" msprop:Generator_ColumnVarNameInTable="columnSummaryPropsManager" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="SummaryPropsManager" msprop:Generator_ColumnPropNameInTable="SummaryPropsManagerColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SummaryPropsRevisionNumber" msdata:ReadOnly="true" msprop:Generator_UserColumnName="SummaryPropsRevisionNumber" msprop:Generator_ColumnVarNameInTable="columnSummaryPropsRevisionNumber" msprop:Generator_ColumnPropNameInRow="SummaryPropsRevisionNumber" msprop:Generator_ColumnPropNameInTable="SummaryPropsRevisionNumberColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SummaryPropsSubject" msprop:Generator_UserColumnName="SummaryPropsSubject" msprop:Generator_ColumnVarNameInTable="columnSummaryPropsSubject" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="SummaryPropsSubject" msprop:Generator_ColumnPropNameInTable="SummaryPropsSubjectColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SummaryPropsTemplate" msdata:ReadOnly="true" msprop:Generator_UserColumnName="SummaryPropsTemplate" msprop:Generator_ColumnVarNameInTable="columnSummaryPropsTemplate" msprop:Generator_ColumnPropNameInRow="SummaryPropsTemplate" msprop:Generator_ColumnPropNameInTable="SummaryPropsTemplateColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SummaryPropsTitle" msprop:Generator_UserColumnName="SummaryPropsTitle" msprop:Generator_ColumnVarNameInTable="columnSummaryPropsTitle" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="SummaryPropsTitle" msprop:Generator_ColumnPropNameInTable="SummaryPropsTitleColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SummaryPropsVersion" msdata:ReadOnly="true" msprop:Generator_UserColumnName="SummaryPropsVersion" msprop:Generator_ColumnVarNameInTable="columnSummaryPropsVersion" msprop:Generator_ColumnPropNameInRow="SummaryPropsVersion" msprop:Generator_ColumnPropNameInTable="SummaryPropsVersionColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
