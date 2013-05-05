@@ -5,7 +5,7 @@ namespace MiniLauncher
 {
     public class CmdLogic
     {
-        private CmdList cmdList = new CmdList();
+        private List<Cmd> cmdList = new List<Cmd>();
         private FileDao fileDao = new FileDao();
         private DbDao dbDao = new DbDao();
 
@@ -83,12 +83,28 @@ namespace MiniLauncher
 
         public void RunWithCmd(Cmd cmd)
         {
-            if (!cmdList.Contains(cmd.name))
+            if (!Contains(cmdList, cmd.name))
             {
                 cmdList.Add(cmd);
                 dbDao.InsertCmd(cmd);
             }
             cmd.Start();
+        }
+
+        private bool Contains(List<Cmd> cmdList, string name)
+        {
+            bool result = false;
+
+            foreach (Cmd cmd in cmdList)
+            {
+                if (cmd.name.Equals(name))
+                {
+                    result = true;
+                    break;
+                }
+            }
+
+            return result;
         }
     }
 }
