@@ -93,7 +93,6 @@
     <Compile Include="Form\CmdForm.Designer.cs">
       <DependentUpon>CmdForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\CmdList.cs" />
     <Compile Include="Logic\CmdLogic.cs" />
     <Compile Include="Dao\DbDao.cs" />
     <Compile Include="Dao\FileDao.cs" />

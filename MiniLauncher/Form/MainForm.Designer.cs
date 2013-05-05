@@ -29,14 +29,15 @@ namespace MiniLauncher
         /// </summary>
         private void InitializeComponent()
         {
-            this.inputTextBox = new CmdTextBox();
-            this.cmdListBox = new CmdListBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            this.inputTextBox = new MiniLauncher.Form.CmdTextBox();
+            this.cmdListBox = new MiniLauncher.Form.CmdListBox();
             this.SuspendLayout();
             // 
             // inputTextBox
             // 
-            this.inputTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.inputTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.inputTextBox.Location = new System.Drawing.Point(0, 0);
             this.inputTextBox.Name = "inputTextBox";
             this.inputTextBox.Size = new System.Drawing.Size(284, 19);
@@ -46,9 +47,9 @@ namespace MiniLauncher
             // 
             // cmdListBox
             // 
-            this.cmdListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmdListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmdListBox.Font = new System.Drawing.Font("ＭＳ ゴシック", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cmdListBox.FormattingEnabled = true;
             this.cmdListBox.ItemHeight = 12;
@@ -64,6 +65,7 @@ namespace MiniLauncher
             this.ClientSize = new System.Drawing.Size(284, 262);
             this.Controls.Add(this.inputTextBox);
             this.Controls.Add(this.cmdListBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.Text = "MiniLauncher";
             this.Load += new System.EventHandler(this.MainForm_Load);
