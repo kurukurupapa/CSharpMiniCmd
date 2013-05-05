@@ -86,7 +86,7 @@ namespace MiniLauncher
                 else
                 {
                     Cmd cmd = inputTextBox.Cmd;
-                    MessageBox.Show("path=" + cmd.path + "\r\n" + "arg=" + cmd.arg);
+                    //MessageBox.Show("path=" + cmd.path + "\r\n" + "arg=" + cmd.arg);
                     cmdListLogic.RunWithCmd(cmd);
                 }
 
