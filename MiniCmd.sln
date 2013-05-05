@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual C# Express 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Windows Desktop
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniBack", "MiniBack\MiniBack.csproj", "{B141A28A-CC10-443E-8FD5-940B615BAFDE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniExcel", "MiniExcel\MiniExcel.csproj", "{708483EA-7DD2-4AB3-B8BE-3D9B7B11C41E}"
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniBackTest", "MiniBackTest\MiniBackTest.csproj", "{1A7BBA5F-CCD9-4D1B-BFEF-1F12CC1D1712}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniUtilsTest", "MiniUtilsTest\MiniUtilsTest.csproj", "{6C75A313-57E6-418C-9A3F-F6E1C63B96CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniLauncher", "MiniLauncher\MiniLauncher.csproj", "{023DD6D2-ACE6-471D-95FE-C817097C161E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -78,6 +80,12 @@ Global
 		{6C75A313-57E6-418C-9A3F-F6E1C63B96CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C75A313-57E6-418C-9A3F-F6E1C63B96CD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6C75A313-57E6-418C-9A3F-F6E1C63B96CD}.Release|x86.ActiveCfg = Release|Any CPU
+		{023DD6D2-ACE6-471D-95FE-C817097C161E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{023DD6D2-ACE6-471D-95FE-C817097C161E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{023DD6D2-ACE6-471D-95FE-C817097C161E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{023DD6D2-ACE6-471D-95FE-C817097C161E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{023DD6D2-ACE6-471D-95FE-C817097C161E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{023DD6D2-ACE6-471D-95FE-C817097C161E}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
