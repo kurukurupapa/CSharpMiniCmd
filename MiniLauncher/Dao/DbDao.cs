@@ -6,16 +6,16 @@ using System.Data;
 using System.Data.SqlServerCe;
 using MiniLauncher.Model;
 
-namespace MiniLauncher
+namespace MiniLauncher.Model
 {
     /// <summary>
     /// データベースアクセスするクラスです。
     /// </summary>
-    public class DbDao
+    internal class DbDao
     {
         private static string connectionString = "DataSource=MiniLauncher.sdf;";
 
-        public List<Cmd> GetDbList()
+        internal List<Cmd> GetDbList()
         {
             List<Cmd> list = new List<Cmd>();
 
@@ -31,7 +31,7 @@ namespace MiniLauncher
                 DataTable table = dataSet.Tables["Cmd"];
                 foreach (DataRow row in table.Rows)
                 {
-                    Cmd cmd = new ExecutionCmd();
+                    Cmd cmd = new Cmd();
                     cmd.name = (string)row["name"];
                     cmd.description = (string)row["description"];
                     cmd.path = (string)row["path"];
@@ -49,7 +49,7 @@ namespace MiniLauncher
             return list;
         }
 
-        public void InsertCmd(Cmd cmd)
+        internal void InsertCmd(Cmd cmd)
         {
             SqlCeConnection con = new SqlCeConnection(connectionString);
             try

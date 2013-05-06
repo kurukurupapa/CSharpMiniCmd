@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace MiniLauncher
+namespace MiniLauncher.Form
 {
     public partial class SettingForm : System.Windows.Forms.Form
     {

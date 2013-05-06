@@ -1,64 +1,41 @@
 ﻿using System.Diagnostics;
 using System.Text.RegularExpressions;
 
-namespace MiniLauncher
+namespace MiniLauncher.Model
 {
-    public abstract class Cmd
+    internal class Cmd
     {
-        public enum CommandType
+        internal enum CmdType
         {
             Execution,
             Setting
         }
 
-        public string name;
-        public string description;
-        //public CommandType type;
-        public string path;
-        public string arg;
+        internal string name = string.Empty;
+        internal string description = string.Empty;
+        internal CmdType type = CmdType.Execution;
+        internal string path = string.Empty;
+        internal string arg = string.Empty;
 
-        public Cmd()
+        internal Cmd()
         {
             // 処理なし
         }
-
-        public Cmd(string cmdline)
-        {
-            string[] arr = SplitCmdLine(cmdline);
-
-            name = cmdline;
-            description = cmdline;
-            //type = CommandType.Execution;
-            path = arr[0];
-            arg = arr[1];
-        }
-
-        private string[] SplitCmdLine(string cmdline)
-        {
-            string[] arr = new string[2];
-            cmdline = cmdline.Trim();
-            // TODO 実行ファイルパスのスペースを考慮する
-            Regex regex = new Regex("^([^ ]+) (.+)$", RegexOptions.IgnoreCase);
-            Match match = regex.Match(cmdline);
-            if (match.Success)
-            {
-                arr[0] = match.Groups[1].Value;
-                arr[1] = match.Groups[2].Value;
-            }
-            else
-            {
-                arr[0] = cmdline;
-                arr[1] = null;
-            }
-            return arr;
-        }
-
-        public abstract void Start();
 
         public override string ToString()
         {
             return name;
         }
 
+        /// <summary>
+        /// 実行内容の同一性を判定する。
+        /// </summary>
+        /// <param name="cmd"></param>
+        /// <returns></returns>
+        public bool EqualsCmdLine(Cmd cmd)
+        {
+            return this.path.Equals(cmd.path) &&
+                this.arg.Equals(cmd.arg);
+        }
     }
 }

@@ -1,9 +1,10 @@
 ﻿using MiniLauncher.Model;
 using System.Collections.Generic;
+using System.Diagnostics;
 
-namespace MiniLauncher
+namespace MiniLauncher.Logic
 {
-    public class CmdLogic
+    internal class CmdFacade
     {
         private List<Cmd> cmdList = new List<Cmd>();
         private FileDao fileDao = new FileDao();
@@ -12,7 +13,7 @@ namespace MiniLauncher
         /// <summary>
         /// コンストラクタ
         /// </summary>
-        public CmdLogic()
+        internal CmdFacade()
         {
             // 処理なし
         }
@@ -21,7 +22,7 @@ namespace MiniLauncher
         /// コマンドリストを取得する。
         /// </summary>
         /// <returns></returns>
-        public List<Cmd> FindAll()
+        internal List<Cmd> FindAll()
         {
             return cmdList;
         }
@@ -31,7 +32,7 @@ namespace MiniLauncher
         /// </summary>
         /// <param name="keyword">キーワード</param>
         /// <returns></returns>
-        public List<Cmd> Find(string keyword)
+        internal List<Cmd> Find(string keyword)
         {
             // キーワードが空の場合、全コマンドリストを返却する。
             if (string.IsNullOrEmpty(keyword))
@@ -60,7 +61,7 @@ namespace MiniLauncher
         /// <summary>
         /// リストを更新する。
         /// </summary>
-        public void Update()
+        internal void Update()
         {
             cmdList.Clear();
             cmdList.AddRange(dbDao.GetDbList());
@@ -72,32 +73,30 @@ namespace MiniLauncher
         private List<Cmd> GetAppList()
         {
             List<Cmd> list = new List<Cmd>();
-
-            Cmd cmd = new SettingCmd();
-            cmd.name = "Setting";
-            //cmd.type = Cmd.CommandType.Setting;
-            list.Add(cmd);
-
+            Cmd cmd = CmdFactory.CreateSettingCmd();
             return list;
         }
 
-        public void RunWithCmd(Cmd cmd)
+        /// <summary>
+        /// 引数のコマンドがDB未登録なら、登録する。
+        /// </summary>
+        /// <param name="cmd"></param>
+        internal void Save(Cmd cmd)
         {
-            if (!Contains(cmdList, cmd.name))
+            if (!Contains(cmdList, cmd))
             {
                 cmdList.Add(cmd);
                 dbDao.InsertCmd(cmd);
             }
-            cmd.Start();
         }
 
-        private bool Contains(List<Cmd> cmdList, string name)
+        private bool Contains(List<Cmd> cmdList, Cmd targetCmd)
         {
             bool result = false;
 
             foreach (Cmd cmd in cmdList)
             {
-                if (cmd.name.Equals(name))
+                if (cmd.EqualsCmdLine(targetCmd))
                 {
                     result = true;
                     break;

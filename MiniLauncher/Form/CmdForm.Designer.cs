@@ -1,4 +1,4 @@
-﻿namespace MiniLauncher
+﻿namespace MiniLauncher.Form
 {
     partial class CmdForm
     {
@@ -156,7 +156,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox descriptionTextBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox argTextBox;
+        protected System.Windows.Forms.TextBox argTextBox;
         private System.Windows.Forms.Button okButton;
         private System.Windows.Forms.Button cancelButton;
     }

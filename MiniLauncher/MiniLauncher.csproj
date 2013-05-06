@@ -73,6 +73,7 @@
   <ItemGroup>
     <Compile Include="Dao\MiniLauncherDataSet.cs">
       <DependentUpon>MiniLauncherDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Form\CmdListBox.cs">
       <SubType>Component</SubType>
@@ -85,7 +86,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MiniLauncherDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Form\MiniLauncherDataSetTableAdapters.cs" />
+    <Compile Include="Logic\CmdDecorator.cs" />
+    <Compile Include="Logic\CmdFactory.cs" />
     <Compile Include="Model\Cmd.cs" />
     <Compile Include="Form\CmdForm.cs">
       <SubType>Form</SubType>
@@ -93,7 +95,7 @@
     <Compile Include="Form\CmdForm.Designer.cs">
       <DependentUpon>CmdForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Logic\CmdLogic.cs" />
+    <Compile Include="Logic\CmdFacade.cs" />
     <Compile Include="Dao\DbDao.cs" />
     <Compile Include="Dao\FileDao.cs" />
     <Compile Include="Form\MainForm.cs">
@@ -102,8 +104,6 @@
     <Compile Include="Form\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\ExecutionCmd.cs" />
-    <Compile Include="Model\SettingCmd.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form\CmdForm.resx">

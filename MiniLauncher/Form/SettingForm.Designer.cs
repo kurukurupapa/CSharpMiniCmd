@@ -1,5 +1,6 @@
 ﻿using MiniLauncher.Dao;
-namespace MiniLauncher
+
+namespace MiniLauncher.Form
 {
     partial class SettingForm
     {

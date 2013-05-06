@@ -7,13 +7,13 @@ namespace MiniLauncher
     /// <summary>
     /// ファイルにアクセスするクラスです。
     /// </summary>
-    public class FileDao
+    internal class FileDao
     {
         /// <summary>
         /// Path環境変数で指定されたフォルダ配下のコマンドリストを取得する。
         /// </summary>
         /// <returns></returns>
-        public List<Cmd> GetPathEnvList()
+        internal List<Cmd> GetPathEnvList()
         {
             List<Cmd> list = new List<Cmd>();
 
@@ -36,12 +36,12 @@ namespace MiniLauncher
             return list;
         }
 
-        public List<Cmd> GetFileCmdList(string dir)
+        internal List<Cmd> GetFileCmdList(string dir)
         {
             return GetFileCmdList(dir, null);
         }
 
-        public List<Cmd> GetFileCmdList(string dir, string pattern)
+        internal List<Cmd> GetFileCmdList(string dir, string pattern)
         {
             List<Cmd> list = new List<Cmd>();
 
@@ -62,7 +62,7 @@ namespace MiniLauncher
 
             foreach (string path in exeList)
             {
-                Cmd command = new ExecutionCmd();
+                Cmd command = new Cmd();
                 //command.name = Path.GetFileName(path);
                 command.name = path;
                 //command.type = Cmd.CommandType.Execution;
@@ -79,7 +79,7 @@ namespace MiniLauncher
         /// カレントフォルダ配下の実行ファイルをMiniCmdシリーズのコマンドとして判断する。
         /// </summary>
         /// <returns>コマンドリスト</returns>
-        public List<Cmd> GetMiniCmdList()
+        internal List<Cmd> GetMiniCmdList()
         {
             List<Cmd> list = new List<Cmd>();
             foreach (Cmd cmd in GetFileCmdList(Directory.GetCurrentDirectory()))

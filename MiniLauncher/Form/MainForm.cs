@@ -1,14 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using MiniLauncher.Logic;
+using MiniLauncher.Model;
+using System;
 using System.Windows.Forms;
 
-namespace MiniLauncher
+namespace MiniLauncher.Form
 {
     public partial class MainForm : System.Windows.Forms.Form
     {
-        private CmdLogic cmdListLogic = new CmdLogic();
-        //private List<Cmd> cmdList = null;
+        private CmdFacade cmdFacade = new CmdFacade();
         private bool cmdListSelectMode = false;
 
         public MainForm()
@@ -16,10 +15,10 @@ namespace MiniLauncher
             InitializeComponent();
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
+        private void MainForm_Shown(object sender, EventArgs e)
         {
             // コマンド候補リストを更新する。
-            cmdListLogic.Update();
+            cmdFacade.Update();
             UpdateCmdListBox();
         }
 
@@ -69,7 +68,7 @@ namespace MiniLauncher
         /// </summary>
         private void UpdateCmdListBox()
         {
-            cmdListBox.CmdList = cmdListLogic.Find(inputTextBox.Text);
+            cmdListBox.CmdList = cmdFacade.Find(inputTextBox.Text);
         }
 
         /// <summary>
@@ -79,34 +78,33 @@ namespace MiniLauncher
         {
             try
             {
-                if (cmdListSelectMode)
+                // テキストボックス入力中の場合、入力テキストは、DB登録されていない可能性がある。
+                // DB登録状態を確認し、必要ならDB登録する。
+                if (!cmdListSelectMode)
                 {
-                    cmdListBox.SelectedCmd.Start();
-                }
-                else
-                {
-                    Cmd cmd = inputTextBox.Cmd;
+                    Cmd cmd = CmdFactory.CreateCmdWithCmdLine(inputTextBox.Text);
                     //MessageBox.Show("path=" + cmd.path + "\r\n" + "arg=" + cmd.arg);
-                    cmdListLogic.RunWithCmd(cmd);
+                    cmdFacade.Save(cmd);
                 }
 
-                // コマンド候補リストを更新する。
-                UpdateCmdListBox();
+                // コマンドの種類を判定して、実行する。
+                switch (cmdListBox.SelectedCmd.type)
+                {
+                    case Cmd.CmdType.Execution:
+                        new CmdDecorator(cmdListBox.SelectedCmd).Start();
+                        break;
+                    case Cmd.CmdType.Setting:
+                        SettingForm form = new SettingForm();
+                        form.ShowDialog();
+                        break;
+                }
+
+                // テキストボックスやリストボックスを初期状態に戻す。
+                inputTextBox.Text = string.Empty;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message + "\r\n" + ex.StackTrace);
-            }
-        }
-
-        private void editButton_Click(object sender, EventArgs e)
-        {
-            Cmd cmd = cmdListBox.SelectedCmd;
-            CmdForm form = new CmdForm();
-            form.SetCmd(cmd);
-            DialogResult result = form.ShowDialog();
-            if (result == DialogResult.OK)
-            {
             }
         }
 
@@ -117,9 +115,11 @@ namespace MiniLauncher
         /// <param name="e"></param>
         private void MainForm_DragEnter(object sender, DragEventArgs e)
         {
-            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            if (e.Data.GetDataPresent(DataFormats.FileDrop) &&
+                ((string[])e.Data.GetData(DataFormats.FileDrop, false)).Length == 1)
             {
-                //ドラッグされたデータ形式を調べ、ファイルのときはコピーとする
+                //ドラッグされたデータ形式を調べ、ファイル/ディレクトリのときはコピーとする
+                // １件のみを対象とする
                 e.Effect = DragDropEffects.Copy;
             }
             else
@@ -139,8 +139,17 @@ namespace MiniLauncher
             //ドロップされたすべてのファイル名を取得する
             string[] fileName = (string[])e.Data.GetData(DataFormats.FileDrop, false);
 
-            // テキストボックスに表示する
-            inputTextBox.AddFileList(fileName);
+            // コマンド登録フォームを表示する。
+            CmdForm form = new CmdForm();
+            form.Cmd = CmdFactory.CreateCmdWithPath(fileName[0]);
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                // DB登録する。
+                cmdFacade.Save(form.Cmd);
+
+                // テキストボックスに表示する
+                inputTextBox.Text = form.Cmd.name;
+            }
         }
 
     }

@@ -1,5 +1,6 @@
 ﻿using MiniLauncher.Form;
-namespace MiniLauncher
+
+namespace MiniLauncher.Form
 {
     partial class MainForm
     {
@@ -69,7 +70,7 @@ namespace MiniLauncher
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.Text = "MiniLauncher";
-            this.Load += new System.EventHandler(this.MainForm_Load);
+            this.Shown += new System.EventHandler(this.MainForm_Shown);
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.MainForm_DragDrop);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.MainForm_DragEnter);
             this.ResumeLayout(false);
