@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MiniBackTest</RootNamespace>
     <AssemblyName>MiniBackTest</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -59,6 +59,7 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
@@ -67,17 +68,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="nunit.bat" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\MiniBack\MiniBack.csproj">
-      <Project>{b141a28a-cc10-443e-8fd5-940b615bafde}</Project>
+      <Project>{B141A28A-CC10-443E-8FD5-940B615BAFDE}</Project>
       <Name>MiniBack</Name>
     </ProjectReference>
     <ProjectReference Include="..\MiniUtils\MiniUtils.csproj">
-      <Project>{8f3d68e5-19a6-4d39-9381-4ef2971c43df}</Project>
+      <Project>{8F3D68E5-19A6-4D39-9381-4EF2971C43DF}</Project>
       <Name>MiniUtils</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="nunit.bat" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
