@@ -1,34 +1,34 @@
 C# MiniCmd
 =============
 
-WindowsŠÂ‹«‚Å‚ÌA“úX‚Ì‘€ì‚ð­‚µ‚¾‚¯Šy‚É‚·‚é‚¤ƒc[ƒ‹ŒQi‚ð–ÚŽw‚µ‚Ä‚¢‚éƒ\ƒtƒgƒEƒFƒAj‚Å‚·B
+Windowsç’°å¢ƒã§ã®ã€æ—¥ã€…ã®æ“ä½œã‚’å°‘ã—ã ã‘æ¥½ã«ã™ã‚‹ã†ãƒ„ãƒ¼ãƒ«ç¾¤ï¼ˆã‚’ç›®æŒ‡ã—ã¦ã„ã‚‹ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ï¼‰ã§ã™ã€‚
 
-##MiniBack
-ƒtƒ@ƒCƒ‹–¼‚Éƒ^ƒCƒ€ƒXƒ^ƒ“ƒv‚ð•t‚¯‚ÄƒoƒbƒNƒAƒbƒv‚·‚éƒc[ƒ‹‚Å‚·B
+## MiniBack
+ãƒ•ã‚¡ã‚¤ãƒ«åã«ã‚¿ã‚¤ãƒ ã‚¹ã‚¿ãƒ³ãƒ—ã‚’ä»˜ã‘ã¦ãƒãƒƒã‚¯ã‚¢ãƒƒãƒ—ã™ã‚‹ãƒ„ãƒ¼ãƒ«ã§ã™ã€‚
 
 Version 0.4.1, 2010/12/05  
-ƒtƒHƒ‹ƒ_‚àƒoƒbƒNƒAƒbƒvo—ˆ‚é‚æ‚¤‚É‚µ‚Ü‚µ‚½B
+ãƒ•ã‚©ãƒ«ãƒ€ã‚‚ãƒãƒƒã‚¯ã‚¢ãƒƒãƒ—å‡ºæ¥ã‚‹ã‚ˆã†ã«ã—ã¾ã—ãŸã€‚
 
-##MiniExcel
-Excelƒtƒ@ƒCƒ‹‚ðƒeƒLƒXƒgƒtƒ@ƒCƒ‹‚É•ÏŠ·‚·‚éƒc[ƒ‹‚Å‚·B
+## MiniExcel
+Excelãƒ•ã‚¡ã‚¤ãƒ«ã‚’ãƒ†ã‚­ã‚¹ãƒˆãƒ•ã‚¡ã‚¤ãƒ«ã«å¤‰æ›ã™ã‚‹ãƒ„ãƒ¼ãƒ«ã§ã™ã€‚
 
-##MiniFileList
-Žw’èƒtƒHƒ‹ƒ_”z‰º‚Ìƒtƒ@ƒCƒ‹ˆê——‚ðì¬‚·‚éƒc[ƒ‹‚Å‚·B
-ƒtƒ@ƒCƒ‹ƒTƒCƒY‚âXV“úŽžAƒhƒLƒ…ƒƒ“ƒgƒvƒƒpƒeƒB‚ðo—Í‚µ‚Ü‚·B
+## MiniFileList
+æŒ‡å®šãƒ•ã‚©ãƒ«ãƒ€é…ä¸‹ã®ãƒ•ã‚¡ã‚¤ãƒ«ä¸€è¦§ã‚’ä½œæˆã™ã‚‹ãƒ„ãƒ¼ãƒ«ã§ã™ã€‚
+ãƒ•ã‚¡ã‚¤ãƒ«ã‚µã‚¤ã‚ºã‚„æ›´æ–°æ—¥æ™‚ã€ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’å‡ºåŠ›ã—ã¾ã™ã€‚
 
-¦ƒ}ƒCƒNƒƒ\ƒtƒg’ñ‹Ÿ‚Ìdsofile.dll‚ðƒCƒ“ƒXƒg[ƒ‹‚·‚é•K—v‚ª‚ ‚è‚Ü‚·B  
-@http://support.microsoft.com/kb/224351/ja
+â€»ãƒžã‚¤ã‚¯ãƒ­ã‚½ãƒ•ãƒˆæä¾›ã®dsofile.dllã‚’ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã™ã‚‹å¿…è¦ãŒã‚ã‚Šã¾ã™ã€‚  
+ã€€http://support.microsoft.com/kb/224351/ja
 
-¦MiniFilePropChanger‚Æ‹@”\‚ªd•¡‚µ‚Ä‚¢‚é‚Ì‚ÅAŒã‚Ù‚ÇMiniFileList‚ðíœ‚·‚é—\’è‚Å‚·B
+â€»MiniFilePropChangerã¨æ©Ÿèƒ½ãŒé‡è¤‡ã—ã¦ã„ã‚‹ã®ã§ã€å¾Œã»ã©MiniFileListã‚’å‰Šé™¤ã™ã‚‹äºˆå®šã§ã™ã€‚
 
 Version 0.4, 2010/12/05  
-V‹KŒöŠJ
+æ–°è¦å…¬é–‹
 
-##MiniFilePropChanger
-Žw’è‚³‚ê‚½ƒtƒ@ƒCƒ‹‚ÌƒvƒƒpƒeƒB‚ðˆê——•\Ž¦A•ÏX‚·‚éƒc[ƒ‹‚Å‚·B
+## MiniFilePropChanger
+æŒ‡å®šã•ã‚ŒãŸãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’ä¸€è¦§è¡¨ç¤ºã€å¤‰æ›´ã™ã‚‹ãƒ„ãƒ¼ãƒ«ã§ã™ã€‚
 
-¦ƒ}ƒCƒNƒƒ\ƒtƒg’ñ‹Ÿ‚Ìdsofile.dll‚ðƒCƒ“ƒXƒg[ƒ‹‚·‚é•K—v‚ª‚ ‚è‚Ü‚·B  
-@http://support.microsoft.com/kb/224351/ja
+â€»ãƒžã‚¤ã‚¯ãƒ­ã‚½ãƒ•ãƒˆæä¾›ã®dsofile.dllã‚’ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã™ã‚‹å¿…è¦ãŒã‚ã‚Šã¾ã™ã€‚  
+ã€€http://support.microsoft.com/kb/224351/ja
 
 Version 0.4.2, 2010/12/05  
-V‹KŒöŠJ
+æ–°è¦å…¬é–‹
